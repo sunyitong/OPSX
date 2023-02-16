@@ -33,13 +33,14 @@ The structure of the repository:
 TODO
 > Remander: Special tools are required to replace the original core board, please read the [Disassembly Guide](https://instantphotography.files.wordpress.com/2010/12/polaroid-sx-70-camera-repair-book.pdf) first.
 ### Fabrication
-Please select a **dual copper layer PCB** with a thickness of **0.8 mm** or less.
+Please select a **dual copper layer PCB** with a thickness of **0.8 mm** or less for fabrication.
 ## Software
 TODO
 ### Uploading
 TODO
 ## Contributor
 [@Yitong Sun](https://github.com/sunyitong) - a PhD candidate in the Computer Science Research Centre at the Royal College of Art.
+
 [RCA website](https://www.rca.ac.uk/research-innovation/research-degrees/research-students/yitong-sun/) - [E-mail](yitong.sun@network.rca.ac.uk)
 ## License
 Any distribution or modification based on this project should be clearly attributed to the source.
