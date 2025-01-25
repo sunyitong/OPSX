@@ -4,11 +4,16 @@ from ssd1306 import SSD1306_I2C
 from vl53l1x import VL53L1X
 import framebuf
 
+# Caution! This value is used to hold the shutter solenoid and should be modified by self-test.
+SOLENOID_THRESHOLD = 20000
+
+
+
 
 def shut(apture, f="1"):
     sht.duty_u16(65535)
     time.sleep_ms(18)
-    sht.duty_u16(10000)
+    sht.duty_u16(10000) 
     motor.value(1)
     while True:
         if s3.value() == 1:
@@ -70,7 +75,8 @@ def backFunc():
     switch()
     dist()
     display.show()
-    
+
+# iso=1 for 600 paper =0 for 70 paper
 def lux(iso=1):
     h = i2c.readfrom_mem(74, 0x03, 1)
     l = i2c.readfrom_mem(74, 0x04, 1)
