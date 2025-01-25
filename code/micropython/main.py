@@ -8,12 +8,10 @@ import framebuf
 SOLENOID_THRESHOLD = 20000
 
 
-
-
 def shut(apture, f="1"):
     sht.duty_u16(65535)
     time.sleep_ms(18)
-    sht.duty_u16(10000) 
+    sht.duty_u16(SOLENOID_THRESHOLD) 
     motor.value(1)
     while True:
         if s3.value() == 1:
@@ -45,7 +43,7 @@ def shut(apture, f="1"):
         
     sht.duty_u16(65535)
     time.sleep_ms(20)
-    sht.duty_u16(10000)
+    sht.duty_u16(SOLENOID_THRESHOLD)
     motor.value(1)
     while True:
         if s5.value() == 0:
