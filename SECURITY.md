@@ -4,6 +4,6 @@ OPSX is hardware that controls electromechanical camera parts. Please do not rep
 
 For private reports, contact:
 
-<yitong.sun@network.rca.ac.uk>
+<hi@yitongsun.com>
 
 Include board revision, firmware commit, reproduction steps, and any relevant measurements.

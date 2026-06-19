@@ -86,7 +86,7 @@ OPSX 会控制快门电磁铁和电机等机电部件。错误校准可能损坏
 Created by [Yitong Sun](https://github.com/sunyitong)，研究与开发方向包括 computational design、sensing systems、XR 与 open hardware。
 
 - Website: <https://www.yitongsun.com>
-- Email: <yitong.sun@network.rca.ac.uk>
+- Email: <hi@yitongsun.com>
 
 ## 许可证
 

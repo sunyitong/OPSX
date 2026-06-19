@@ -86,7 +86,7 @@ Before first use:
 Created by [Yitong Sun](https://github.com/sunyitong), a researcher and developer working across computational design, sensing systems, XR, and open hardware.
 
 - Website: <https://www.yitongsun.com>
-- Email: <yitong.sun@network.rca.ac.uk>
+- Email: <hi@yitongsun.com>
 
 ## License
 
