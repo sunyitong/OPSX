@@ -71,6 +71,7 @@ Before first use:
 - Interactive BOM: [`bom/OPSX_bom.html`](bom/OPSX_bom.html)
 - Schematic: [`schematic/OPSX_schematic.pdf`](schematic/OPSX_schematic.pdf)
 - Gerbers: [`gerber/`](gerber/)
+- KiCad source request: [issue #2](https://github.com/sunyitong/OPSX-SX70/issues/2)
 - SX-70 repair reference: <https://instantphotography.files.wordpress.com/2010/12/polaroid-sx-70-camera-repair-book.pdf>
 
 ## Roadmap
