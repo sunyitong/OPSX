@@ -1,4 +1,4 @@
-# OPSX
+# OPSX-SX70
 
 [中文](README.zh-CN.md) | English
 
@@ -7,7 +7,7 @@
 [![Firmware](https://img.shields.io/badge/Firmware-MicroPython-2B5B84)](code/micropython/)
 [![PCB](https://img.shields.io/badge/PCB-Gerber%20Ready-7A3E9D)](gerber/)
 
-OPSX is an open-source replacement core board for the **Polaroid SX-70** instant camera, built around the Raspberry Pi RP2040. It provides a hackable, repair-friendly electronics platform while preserving the essential camera-control behavior of the original board.
+OPSX-SX70 is an open-source replacement core board for the **Polaroid SX-70** instant camera, built around the Raspberry Pi RP2040. It provides a hackable, repair-friendly electronics platform while preserving the essential camera-control behavior of the original board.
 
 ## Highlights
 

@@ -1,4 +1,4 @@
-# OPSX
+# OPSX-SX70
 
 中文 | [English](README.md)
 
@@ -7,7 +7,7 @@
 [![Firmware](https://img.shields.io/badge/Firmware-MicroPython-2B5B84)](code/micropython/)
 [![PCB](https://img.shields.io/badge/PCB-Gerber%20Ready-7A3E9D)](gerber/)
 
-OPSX 是一个面向 **Polaroid SX-70** 即时相机的开源替代核心板，基于 Raspberry Pi RP2040。它的目标是在保留原相机核心控制行为的同时，提供一个更容易维修、调试和扩展的硬件平台。
+OPSX-SX70 是一个面向 **Polaroid SX-70** 即时相机的开源替代核心板，基于 Raspberry Pi RP2040。它的目标是在保留原相机核心控制行为的同时，提供一个更容易维修、调试和扩展的硬件平台。
 
 ## 亮点
 
