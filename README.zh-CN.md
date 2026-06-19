@@ -71,6 +71,7 @@ OPSX 会控制快门电磁铁和电机等机电部件。错误校准可能损坏
 - 交互式 BOM：[`bom/OPSX_bom.html`](bom/OPSX_bom.html)
 - 原理图：[`schematic/OPSX_schematic.pdf`](schematic/OPSX_schematic.pdf)
 - Gerber：[`gerber/`](gerber/)
+- KiCad 源文件请求：[issue #2](https://github.com/sunyitong/OPSX-SX70/issues/2)
 - SX-70 维修参考：<https://instantphotography.files.wordpress.com/2010/12/polaroid-sx-70-camera-repair-book.pdf>
 
 ## Roadmap
