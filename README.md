@@ -1,47 +1,93 @@
 # OPSX
-An open sourced Polaroid SX-70 core board
 
-This is an open sourced Polaroid SX-70 instant camera core board with the Raspberry Pi RP2040 as the MCU. The aim of this project is to provide a fully resource accessible and hobbyist friendly replacement core board. It offers more extensibility and hacking ideas while implementing all the features of the original camera.
+[中文](README.zh-CN.md) | English
 
-The structure of the repository:
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Hardware](https://img.shields.io/badge/Open%20Hardware-RP2040%20Core%20Board-0F766E)](gerber/)
+[![Firmware](https://img.shields.io/badge/Firmware-MicroPython-2B5B84)](code/micropython/)
+[![PCB](https://img.shields.io/badge/PCB-Gerber%20Ready-7A3E9D)](gerber/)
 
-1. The [bom](https://github.com/sunyitong/OPSX/tree/master/bom) folder contains an html-based interactive bill of material. You can use it to find the component types and locations
+OPSX is an open-source replacement core board for the **Polaroid SX-70** instant camera, built around the Raspberry Pi RP2040. It provides a hackable, repair-friendly electronics platform while preserving the essential camera-control behavior of the original board.
 
-2. The [code](https://github.com/sunyitong/OPSX/tree/master/code) folder holds the program files necessary to run the core board. The programs are implemented in two separate programming languages:
+## Highlights
 
-   - [Micropython](https://docs.micropython.org/en/latest/rp2/quickref.html): Similar syntax to python, easy to modify and testing.
-   - [Rust](https://docs.rs/rp2040/latest/rp2040/) (TODO): Ultimate performance with zero runtime loss.
+- RP2040-based camera control board.
+- Factory-ready Gerber files.
+- Interactive HTML bill of materials.
+- Schematic PDF for circuit inspection.
+- MicroPython firmware for rapid iteration.
+- Rust firmware workspace reserved for future high-performance control code.
 
-3. The [gerber](https://github.com/sunyitong/OPSX/tree/master/gerber) folder stores the PCB files necessary for factory production.
+## Repository Layout
 
-4. The [schematic](https://github.com/sunyitong/OPSX/tree/master/schematic) folder holds a PDF file which illustrating the circuit principles.
-
-
-## Table of Contents
-
-- [OPSX](#opsx)
-  - [Table of Contents](#table-of-contents)
-  - [Hardware](#hardware)
-    - [Fabrication](#fabrication)
-  - [Software](#software)
-    - [Uploading](#uploading)
-  - [Contributor](#contributor)
-  - [License](#license)
-
+| Path | Contents |
+| --- | --- |
+| [`bom/`](bom/) | Interactive HTML bill of materials for component lookup and placement. |
+| [`code/micropython/`](code/micropython/) | Current firmware implementation for the RP2040 board. |
+| [`code/rust/`](code/rust/) | Placeholder for future Rust firmware. |
+| [`gerber/`](gerber/) | PCB production files and SMT position CSV. |
+| [`schematic/`](schematic/) | One-page schematic PDF. |
+| [`docs/`](docs/) | Fabrication, firmware, calibration, and safety notes. |
 
 ## Hardware
-TODO
-> Remander: Special tools are required to replace the original core board, please read the [Disassembly Guide](https://instantphotography.files.wordpress.com/2010/12/polaroid-sx-70-camera-repair-book.pdf) first.
-### Fabrication
-Please select a **dual copper layer PCB** with a thickness of **0.8 mm** or less for fabrication.
-## Software
-TODO
-### Uploading
-TODO
-## Contributor
-[@Yitong Sun](https://github.com/sunyitong) - a PhD candidate in the Computer Science Research Centre at the Royal College of Art.
 
-[RCA website](https://www.rca.ac.uk/research-innovation/research-degrees/research-students/yitong-sun/) - [E-mail](yitong.sun@network.rca.ac.uk)
+OPSX targets a thin two-layer PCB suitable for the physical constraints of the SX-70 body.
+
+Recommended fabrication settings:
+
+- **Layers:** 2 copper layers
+- **PCB thickness:** 0.8 mm or less
+- **Assembly:** review the interactive BOM before ordering or hand assembly
+- **Files:** use the Gerber package under [`gerber/`](gerber/)
+
+Read [`docs/fabrication.md`](docs/fabrication.md) before manufacturing.
+
+## Firmware
+
+The current firmware is written in MicroPython and lives in [`code/micropython/`](code/micropython/).
+
+Core modules:
+
+- `main.py`: camera-control loop, shutter/motor logic, exposure modes, distance display, and sensor integration.
+- `ssd1306.py`: OLED display driver.
+- `vl53l1x.py`: time-of-flight distance sensor driver.
+
+Read [`docs/firmware.md`](docs/firmware.md) before flashing the board.
+
+## Calibration and Safety
+
+OPSX controls camera electromechanical parts including a shutter solenoid and motor. Incorrect calibration can damage the camera or board.
+
+Before first use:
+
+1. Read [`docs/safety.md`](docs/safety.md).
+2. Inspect soldering and continuity.
+3. Calibrate `SOLENOID_THRESHOLD` in `main.py`.
+4. Test motor and sensor behavior outside the camera body where possible.
+5. Reassemble only after confirming stable control behavior.
+
+## Useful References
+
+- Interactive BOM: [`bom/OPSX_bom.html`](bom/OPSX_bom.html)
+- Schematic: [`schematic/OPSX_schematic.pdf`](schematic/OPSX_schematic.pdf)
+- Gerbers: [`gerber/`](gerber/)
+- SX-70 repair reference: <https://instantphotography.files.wordpress.com/2010/12/polaroid-sx-70-camera-repair-book.pdf>
+
+## Roadmap
+
+- Document complete assembly photographs.
+- Package Gerber/BOM/schematic as GitHub Releases.
+- Add firmware upload scripts.
+- Add Rust firmware implementation.
+- Add calibration logs for different SX-70 bodies.
+
+## Author
+
+Created by [Yitong Sun](https://github.com/sunyitong), a researcher and developer working across computational design, sensing systems, XR, and open hardware.
+
+- Website: <https://www.yitongsun.com>
+- Email: <yitong.sun@network.rca.ac.uk>
+
 ## License
-Any distribution or modification based on this project should be clearly attributed to the source.
-[GPL 3.0](LICENSE) © Yitong Sun
+
+This project is released under the [GNU General Public License v3.0](LICENSE). Any distribution or modification based on this project should clearly attribute the source.
